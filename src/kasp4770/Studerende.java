@@ -1,5 +1,7 @@
 package kasp4770;
 
+import java.util.ArrayList;
+
 public class Studerende {
 
     private String fname = "no fname";
@@ -10,6 +12,7 @@ public class Studerende {
 
     //no arg constructor
     public Studerende(){
+        System.out.println("Ny elev er oprettet! ");
     }
     //Constructors med info
     public Studerende(String fname, String lname) {
