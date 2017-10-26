@@ -5,9 +5,6 @@ public class Start {
 
         DatHoldet datHoldet = new DatHoldet();
 
-
-
-
         MineMetoder metode = new MineMetoder();
         metode.whileLoop();
         metode.doWhileLoop();
