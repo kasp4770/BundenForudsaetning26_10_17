@@ -17,8 +17,14 @@ public class DatHoldet implements Description {
         return dateCreated;
     }
 
+    //Metode til at hente dato for oprettelse af objekt
     public String toString(){
         return "Oprettet d. " + dateCreated;
+    }
+
+    //Abstract metode til beskrivelse af objekt. Alle subklasser kan hente og override'e metoden.
+    public String getDescription(){
+        return "Datamatiker" + toString();
     }
 }
 

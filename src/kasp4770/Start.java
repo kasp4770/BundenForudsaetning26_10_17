@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 public class Start {
     public static void main(String[] args) {
+        System.out.println("-- DEL 1 --\n");
+        //DEL 1: Her viser jeg hvordan man opretter Studerende.java objekter, og hvordan metoderne tilgås.
+        //Resultatet er en udprintning af de data som objektet har tilknyttet ved hjælp af getDescription.
 
         Studerende elev1 = new Studerende("Kasper", "Petersen", Sex.M, 26,
                 "Datamatiker", "+4561408507");
@@ -23,9 +26,22 @@ public class Start {
         elev3.setFname("Flemmine"); //elev3 skifter til et mere feminimt navn
         System.out.println(elev3.getDescription() + "\n" + elev3.toString());
 
+        Studerende elev4 = new Studerende("Michael", "Trans", Sex.M, 25,
+                "Datamatiker", "+45 52365485");
+
+        System.out.println("\n-- DEL 2 --\n");
+        //DEL 2: Her viser jeg en smartere måde at vise alle oplysninger på objekterne på, ved at oprette en ArrayList
+        //og udprinte data ved hjælp af et for-loop
+
         ArrayList<DatHoldet> dat1 = new ArrayList<>();
         dat1.add(elev1);
         dat1.add(elev2);
         dat1.add(elev3);
+        dat1.add(elev4);
+
+        //loop som gennemgår hele listen af objekter og udfører nedenstående kode for hvert loop
+        for(int i = 0; i < dat1.size(); i++){
+            System.out.println(((Studerende)dat1.get(i)).getDescription() + "\n");//Object casting DatHoldet->Studerende
+        }
     }
 }

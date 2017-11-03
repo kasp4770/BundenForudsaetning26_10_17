@@ -4,10 +4,11 @@ public class Studerende extends DatHoldet{
 
     private String fname = "N/A";
     private String lname = "N/A";
+    private Sex sex; //Deklarerer variabel 'sex' så jeg kan bruge enum i metoder (bl.a. i sammenhæng med Switch)
     private int age = 0;
     private String hold = "No course attached";
     private String tlf = "No phone number attached";
-    private Sex sex; //Deklarerer variabel 'sex' så jeg kan bruge enum i metoder (bl.a. Switch i min toString)
+
 
     //Constructor som kræver fornavn, efternavn og køn angivet
     public Studerende(String fname, String lname, Sex sex) {
@@ -24,6 +25,7 @@ public class Studerende extends DatHoldet{
         this.age = age;
         this.hold = hold;
         this.tlf = tlf;
+
     }
 
     //Set metoder
@@ -34,7 +36,9 @@ public class Studerende extends DatHoldet{
         lname = ln;
     }
     public void setSex(Sex s) { sex = s; }
-    public void setAge(int age){ this.age = age; } //Når man bruger samme variabel i metodearg. som den klassevariabel man henviser til, er 'this.' påkrævet.
+    //Når man bruger samme variabel i metodearg. som den klassevariabel man henviser til, er 'this.' påkrævet, for at
+    // compileren ved at det er objektet man henviser til.
+    public void setAge(int age){ this.age = age; }
     public void setHold(String hold){
         this.hold = hold;
     }
