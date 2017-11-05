@@ -1,6 +1,6 @@
 package kasp4770;
 
-public class Studerende extends DatHoldet{
+public class Studerende extends DatHoldet implements Academy{
 
     private String fname = "N/A";
     private String lname = "N/A";
@@ -9,6 +9,8 @@ public class Studerende extends DatHoldet{
     private String hold = "No course attached";
     private String tlf = "No phone number attached";
 
+    //no-arg constructor
+    public Studerende(){}
 
     //Constructor som kræver fornavn, efternavn og køn angivet
     public Studerende(String fname, String lname, Sex sex) {
@@ -83,7 +85,7 @@ public class Studerende extends DatHoldet{
         //    System.out.println("Elevinfo for: ");     eller en constructor som ikke kræver køn angivet. Derfor kan
         //}                                             'null' ikke hænde.
         return "\nNavn: " + getFname() +" "+ getLname() +
-                //"\nKøn: " + getSex() +              - linje hører sammen med ovenstående (udkommenteret else if statement)
+                //"\nKøn: " + getSex() +              - Overflødig så længe ovenstående if/else statement er udkommenteret.
                 "\nAlder: " + getAge() +
                 "\nHold: " + getHold() +
                 "\nTelefon nr.: " + getTlf();

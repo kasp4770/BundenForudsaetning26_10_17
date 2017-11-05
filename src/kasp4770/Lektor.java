@@ -1,6 +1,7 @@
 package kasp4770;
 
-public class Lektor extends DatHoldet {
+//Brugt i DEL 4 - Jeg har lavet endnu en subklasse for at demonstrere polymorfi og instanceof
+public class Lektor extends DatHoldet implements Academy{
 
     private String fname = "N/A";
     private String lname = "N/A";
@@ -26,6 +27,18 @@ public class Lektor extends DatHoldet {
     }
     public String[][] getHold() {
         return hold;
+    }
+    public String getDescription(){
+        if(getSex() == Sex.M){
+            System.out.print("Lektor af køn: " + Sex.M.s());
+        }
+        else if(getSex() == Sex.F){
+            System.out.print("Lektor af køn: " + Sex.F.s());
+        }
+        else if(getSex() == Sex.NA){
+            System.out.print("Lektor af køn: " + Sex.NA.s());
+        }
+        return "\nNavn: " + getFname() +" "+ getLname();
     }
 
     //Set metoder

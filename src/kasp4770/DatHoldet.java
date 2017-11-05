@@ -1,15 +1,29 @@
 package kasp4770;
 
+import java.util.ArrayList;
 import java.util.Date;
-
-public class DatHoldet implements Description {
+//Jeg extend'er ArrayList.java for at kunne override'e metoder uden at skulle omskrive metoderne, men bruger 'super'-keyword.
+public class DatHoldet extends ArrayList {
 
     //Datafield
+    private Course courseName; //Brugt i DEL 3
     private java.util.Date dateCreated;
 
-    //no-arg constructor
-    protected DatHoldet(){
+    //No-arg constructor
+    public DatHoldet() {
+    }
+    //constructor
+    protected DatHoldet(Course courseName){
+        this.courseName = courseName;
         dateCreated = new java.util.Date();
+        System.out.println("Fremmøde for " + courseName.c() + " d. " + getDateCreated());
+    }
+
+    public boolean addStuderende(Studerende elev){ //DEL 3 - override af boolean add(to ArrayList) fra ArrayList.java
+        return super.add(elev);
+    }
+    public boolean addLektor(Lektor lektor){ //Overload som gør mig istand til at tilføje objekt fra Lektor.java
+        return super.add(lektor);
     }
 
     //Metode til at hente dato for oprettelse
@@ -22,9 +36,5 @@ public class DatHoldet implements Description {
         return "Oprettet d. " + dateCreated;
     }
 
-    //Abstract metode til beskrivelse af objekt. Alle subklasser kan hente og override'e metoden.
-    public String getDescription(){
-        return "Datamatiker" + toString();
-    }
 }
 
