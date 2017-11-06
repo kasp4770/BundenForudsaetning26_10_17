@@ -1,5 +1,5 @@
 package kasp4770;
-
+//Enum for fag
 public enum Course { PROG("Programmering"), SYUD("Systemudvikling"), DATA("Database"), VIRK("Virksomhed");
     private String c;
 

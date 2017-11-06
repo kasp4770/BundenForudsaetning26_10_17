@@ -4,7 +4,7 @@ public class Studerende extends DatHoldet implements Academy{
 
     private String fname = "N/A";
     private String lname = "N/A";
-    private Sex sex; //Deklarerer variabel 'sex' så jeg kan bruge enum i metoder (bl.a. i sammenhæng med Switch)
+    private Sex sex; //Deklarerer variabel 'sex' så jeg kan bruge enum i metoder (bl.a. i sammenhæng med Switch).
     private int age = 0;
     private String hold = "No course attached";
     private String tlf = "No phone number attached";

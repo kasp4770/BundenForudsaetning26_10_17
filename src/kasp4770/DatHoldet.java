@@ -6,11 +6,12 @@ import java.util.Date;
 public class DatHoldet extends ArrayList {
 
     //Datafield
-    private Course courseName; //Brugt i DEL 3
+    private Course courseName; //Brugt i DEL 3.
     private java.util.Date dateCreated;
 
     //No-arg constructor
     public DatHoldet() {
+        dateCreated = new java.util.Date();
     }
     //constructor
     protected DatHoldet(Course courseName){

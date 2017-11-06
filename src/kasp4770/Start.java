@@ -48,27 +48,34 @@ public class Start {
         //Her viser jeg en skjult arraylist
         //Programmet går ud på at simulere et afkrydsningsskema for fremmødte elever
         DatHoldet course1 = new DatHoldet(Course.PROG); //nedkalder en constructor som laver en udskrivning
-
+        Lektor lektor1 = new Lektor("András", "Sándor", Sex.M);
+        System.out.println("Lektor: " + lektor1.getFname() + " " + lektor1.getLname());
         /* I DatHoldet.java har jeg lavet et override af add() metoden fra ArrayList. Det gør at når jeg laver et
         DatHoldet objekt og bruger min addStuderende(), bliver objektet automatisk til et ArrayList objekt*/
+        course1.addLektor(lektor1);
         course1.addStuderende(elev1);
         course1.addStuderende(elev2);
         course1.addStuderende(elev3);
         course1.addStuderende(elev4);
 
         for(int i = 0; i < course1.size(); i++){
-            System.out.println(((Studerende)course1.get(i)).getFname() + " " + ((Studerende)course1.get(i)).getLname());
+            if (course1 instanceof Lektor){
+                System.out.println("Lektor" + ((Lektor)course1.get(i)).getFname() +" "+ ((Lektor)course1.get(i)).getLname());
+            }
+            else if (course1 instanceof Studerende) {
+                System.out.println(((Studerende) course1.get(i)).getFname() + " " + ((Studerende) course1.get(i)).getLname());
+            }
         }
         System.out.println("\n-- DEL 4 --\n");
         //Demonstration af plymorfi, intanceof og objectcasting, ved brug af displayObject() nederst i klassen.
-        DatHoldet lektor1 = new Lektor("András", "Sándor", Sex.M);
+        DatHoldet lektor2 = new Lektor("András", "Sándor", Sex.M);
         DatHoldet elev5 = new Studerende("Bruno", "Nielsen", Sex.M, 28,
                 "Datamatiker", "+4579408528");
         DatHoldet elev6 = new Studerende("Frederikke", "Frandsen", Sex.F, 20,
                 "Datamatiker", "+4524808507");
 
         System.out.println("Information om faget " + Course.PROG.c() + ":");
-        displayObject(lektor1);
+        displayObject(lektor2);
         System.out.println("Elever: ");
         displayObject(elev5);
         displayObject(elev6);
@@ -76,7 +83,7 @@ public class Start {
     }
     public static void displayObject(DatHoldet datHoldet) {
         if (datHoldet instanceof Studerende) {
-            System.out.println(((Studerende) datHoldet).getFname() + " "
+            System.out.println(((Studerende) datHoldet).getFname() + " " //Har kun valgt fName og lName
                     + ((Studerende) datHoldet).getLname()); //Explicit Casting
         } else if (datHoldet instanceof Lektor) {
             System.out.println(((Lektor) datHoldet).getDescription()); //Explicit Casting

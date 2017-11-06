@@ -1,6 +1,6 @@
 package kasp4770;
 
-//Brugt i DEL 4 - Jeg har lavet endnu en subklasse for at demonstrere polymorfi og instanceof
+//Brugt i DEL 4 - Jeg har lavet endnu en subklasse for at demonstrere polymorfi og instanceof.
 public class Lektor extends DatHoldet implements Academy{
 
     private String fname = "N/A";

@@ -1,7 +1,6 @@
 package kasp4770;
 
-
-import java.util.Scanner; //Importerer Scannerklassen
+import java.util.Scanner; //Importerer Scannerklassen.
 
 public class MineMetoder {
 
