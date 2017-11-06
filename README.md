@@ -1,4 +1,4 @@
-# Bunden Forudsætning i programmering (Stadig under udvikling. Red. 03/11/17
+# Bunden Forudsætning i programmering, red. 06/11/17
 ## Beskrivelse:
 Videreudvikling af den obligatoriske opgave fra d. 26/10-2017.
 Projektet indeholder meget af det vi har lært indtil november 2017, som f.eks.:
