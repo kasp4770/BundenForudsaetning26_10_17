@@ -6,7 +6,7 @@ Enum, Interface, Super- og subclasses,
 Overloading, Overriding, Objectcasting, Polymorfi, 
 Array, ArrayList, for-, do/while og while loops,
 java.util.Date- og Scannerklassen, m.m.
-Jeg har lavet det sådan så jeg selv bruger det som opslagsværk når der er ting jeg ikke kan huske. F.eks. er det ikke logisk at Studerende.java og Lektor.java er nedarvet fra DatHoldet.java da de ikke har Is-a relation men Has-a relation, men igen; det er for at jeg kan slå op.
+Jeg har lavet det som opslagsværk når der er ting jeg skal have genopfrisket. F.eks. er det ikke logisk at Studerende.java og Lektor.java er nedarvet fra DatHoldet.java da de ikke har Is-a relation men Has-a relation, men det er for at samle alt hvad vi har lært ét sted.
 ## Indhold:
 
 ### src/kasp4770:
